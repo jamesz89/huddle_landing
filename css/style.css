@@ -85,7 +85,6 @@ p {
 }
 
 form {
-  max-width: 90%;
   margin: 4rem auto;
   text-align: center;
   display: flex;
@@ -134,12 +133,44 @@ footer {
   padding: 1rem 2rem;
   background-color: var(--neutral1);
   color: #fff;
+  background-image: url("../images/bg-footer-desktop.png");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-size: contain;
+}
+
+.f-subscribe {
+  margin-left: 0;
+  margin-right: 0;
+}
+.f-subscribe label {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.subs-field {
+  display: flex;
+}
+
+#email {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 0;
+  width: 300px;
 }
 
 .btn-arrow {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   background: var(--primary);
-  width: 35px;
   page-break-after: auto;
+  width: 60px;
+}
+
+.btn-arrow img {
+  margin: auto;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .f-brand h2 {
@@ -148,6 +179,10 @@ footer {
   text-align: left;
   font-size: 2rem;
   padding: 0;
+}
+
+.f-brand p {
+  text-align: left;
 }
 
 .f-social {
@@ -160,18 +195,15 @@ footer {
   margin-right: 1.2rem;
 }
 
-.f-nav ul {
-  list-style: none;
+.foot-menu ul {
+  display: block;
+  list-style-type: none;
   padding: 0;
-  margin-top: 4rem;
-}
-
-.f-nav li {
-  margin-bottom: 1rem;
+  line-height: 3;
 }
 
 .f-copy {
-  margin: 7.5rem auto 1.5rem auto;
+  margin: 2rem auto 1.5rem auto;
   text-align: center;
   font-size: 0.85rem;
   color: var(--neutral2);
@@ -220,37 +252,36 @@ footer {
     margin: 0;
   }
 
-  form {
-    flex-direction: row;
-    padding: 0 1rem;
-  }
-
   #register {
     width: 35vw;
     font-size: 0.9rem;
+    margin: auto;
   }
 
   /* Footer */
+
   .flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
-  .f-right {
-    text-align: right;
+  .foot-subs {
+    order: 4;
+    max-width: 25%;
+  }
+  .foot-brand {
+    order: 1;
+    max-width: 25%;
   }
 
-  .f-copy {
-    text-align: right;
+  .menu-left {
+    order: 2;
+    max-width: 25%;
   }
 
-  .f-nav ul {
-    text-align: right;
-    margin-top: 2.6rem;
-  }
-
-  .f-nav li {
-    display: inline-block;
-    margin-left: 3rem;
+  .menu-right {
+    order: 3;
+    max-width: 25%;
   }
 }
